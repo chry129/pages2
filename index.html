@@ -1,122 +1,132 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FocusForge - Study planning that stays simple</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body id="top">
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FocusForge - Study planning that stays simple</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header>
-      <p><a href="#top">FocusForge</a></p>
-
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#workflow">Workflow</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">FocusForge<span class="dot">.</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#contact">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main id="main-content">
-      <section id="overview">
+  <main id="main-content">
+    <section class="hero" id="overview">
+      <div class="container hero-content">
         <h1>Study planning that stays simple</h1>
-        <p>FocusForge is a minimal weekly system for choosing what matters, working in focus blocks, and reviewing what you learned.</p>
-        <p><a href="#cta">Get started with a weekly plan</a></p>
+        <p class="hero-subhead">FocusForge is a minimal weekly system for choosing what matters, working in focus blocks, and reviewing what you learned.</p>
+        <a class="btn btn-dark" href="#cta">Get started with a weekly plan</a>
+      </div>
+    </section>
 
-        <figure>
-          <img
-            src="images/hero-focusforge.png"
-            width="1200"
-            height="600"
-            alt="An abstract blue-to-orange gradient with soft circles, used as a hero background."
-          >
-          <figcaption>Built for clarity: one plan, one week, one place.</figcaption>
-        </figure>
-      </section>
-
-      <section id="features">
-        <h2>Three features to keep you moving</h2>
-
-        <article>
-          <img src="images/icon-templates.svg" width="96" height="96" alt="A document icon representing reusable templates.">
-          <h3>Easy templates</h3>
+    <section class="features" id="features">
+      <div class="container features-grid">
+        <article class="feature">
+          <div class="icon" aria-hidden="true"><img src="images/icon-templates.svg" alt=""></div>
+          <h2>Easy templates</h2>
           <p>Start with a one-page plan and fill it in using your own words. No accounts, no clutter.</p>
         </article>
 
-        <article>
-          <img src="images/icon-timer.svg" width="96" height="96" alt="A timer icon representing focus blocks.">
-          <h3>Focus blocks</h3>
-          <p>Work in short sessions, then take real breaks. The workflow is consistent even when the week isn't.</p>
+        <article class="feature">
+          <div class="icon" aria-hidden="true"><img src="images/icon-timer.svg" alt=""></div>
+          <h2>Focus blocks</h2>
+          <p>Work in short sessions, then take real breaks. The workflow is consistent even when the week isn&apos;t.</p>
         </article>
 
-        <article>
-          <img src="images/icon-accessible.svg" width="96" height="96" alt="An accessibility icon representing inclusive design.">
-          <h3>Accessible by design</h3>
+        <article class="feature">
+          <div class="icon" aria-hidden="true"><img src="images/icon-accessible.svg" alt=""></div>
+          <h2>Accessible by design</h2>
           <p>Clear headings, readable structure, and descriptive links support screen readers and quick scanning.</p>
         </article>
-      </section>
+      </div>
+    </section>
 
-      <section id="workflow">
-        <h2>Featured content: the weekly workflow</h2>
-        <p>This structure highlights a key idea: you do not need a perfect plan; you need a plan you will actually revisit.</p>
-
-        <ul>
+    <section class="featured" id="workflow">
+      <div class="container">
+        <h2 class="section-title">Featured Content: The Weekly Workflow</h2>
+        <p class="section-lede">This structure highlights a key idea: you do not need a perfect plan; you need a plan you will actually revisit.</p>
+        <ul class="workflow-list">
           <li>Choose three priority tasks for the week.</li>
           <li>Schedule focus blocks for the hardest task first.</li>
-          <li>Review what worked and adjust tomorrow's plan.</li>
+          <li>Review what worked and adjust tomorrow&apos;s plan.</li>
         </ul>
-
-        <figure>
-          <img
-            src="images/featured-workflow.png"
-            width="1000"
-            height="650"
-            alt="A diagram showing a three-step workflow: Plan, Focus, and Review."
-          >
-          <figcaption>A simple flow you can reuse for any class or project.</figcaption>
+        <figure class="media">
+          <img src="images/featured-workflow.png" width="1000" height="650" alt="A diagram showing a three-step workflow: Plan, Focus, and Review.">
         </figure>
+      </div>
+    </section>
 
-        <p><a href="#resources">Explore more study resources</a></p>
-      </section>
-
-      <section id="resources">
-        <h2>Secondary content</h2>
-
-        <article>
-          <h3>For solo study</h3>
-          <p>Use a weekly checklist and a short reflection to build momentum without overplanning.</p>
-          <p><a href="#contact">Ask for a sample template by email</a></p>
+    <section class="secondary" id="resources">
+      <div class="container secondary-grid">
+        <article class="card">
+          <div class="card-text">
+            <h3>For solo study</h3>
+            <p>Use a weekly checklist and a short reflection to build momentum without overplanning.</p>
+            <a class="btn btn-outline" href="#contact">Ask for a sample template by email</a>
+          </div>
+          <div class="card-image img-a" role="img" aria-label="FocusForge hero-style abstract background"></div>
         </article>
 
-        <article>
-          <h3>For group projects</h3>
-          <p>Turn one weekly plan into shared roles, meeting notes, and a clear &quot;next step&quot; for everyone.</p>
-          <p><a href="#features">Review the three core features</a></p>
+        <article class="card">
+          <div class="card-text">
+            <h3>For group projects</h3>
+            <p>Turn one weekly plan into shared roles, meeting notes, and a clear next step for everyone.</p>
+            <a class="btn btn-outline" href="#features">Review the three core features</a>
+          </div>
+          <div class="card-image img-b" role="img" aria-label="Workflow diagram style image"></div>
         </article>
-      </section>
+      </div>
+    </section>
 
-      <section id="cta">
-        <h2>Heard enough?</h2>
-        <p>Pick a goal for this week and make your first plan in under five minutes.</p>
-        <p><a href="#overview">Get started with the overview</a></p>
-      </section>
-    </main>
+    <section class="cta" id="cta">
+      <div class="container cta-inner">
+        <h2 class="section-title">Heard enough?</h2>
+        <p class="section-lede">Pick a goal for this week and make your first plan in under five minutes.</p>
+        <a class="btn btn-dark" href="#overview">Get started with the overview</a>
+      </div>
+    </section>
+  </main>
 
-    <footer id="contact">
-      <p>&copy; 2026 FocusForge. All rights reserved.</p>
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>&copy; 2026 FocusForge. All rights reserved.</p>
+        <p><a href="#main-content">Back to main content</a> | <a href="mailto:hello@focusforge.example">Email the FocusForge team</a></p>
+      </div>
 
-      <nav aria-label="Footer links">
-        <ul>
-          <li><a href="#main-content">Back to main content</a></li>
-          <li><a href="mailto:hello@focusforge.example">Email the FocusForge team</a></li>
-          <li><a href="#overview">Read the page overview</a></li>
-        </ul>
-      </nav>
-    </footer>
-  </body>
+      <div class="footer-cols">
+        <section class="footer-col">
+          <h4>Explore</h4>
+          <a href="#overview">Overview</a>
+          <a href="#features">Features</a>
+          <a href="#workflow">Workflow</a>
+        </section>
+
+        <section class="footer-col">
+          <h4>Resources</h4>
+          <a href="#resources">Study Guides</a>
+          <a href="#resources">Templates</a>
+          <a href="#resources">Planning Tips</a>
+        </section>
+
+        <section class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:hello@focusforge.example">Email</a>
+          <a href="#top">Back to top</a>
+        </section>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>

@@ -1,389 +1,388 @@
-/* FocusForge A4 stylesheet */
+/* a4stylesheet.css
+   A4: Intro CSS Fill-in Template
+   Instructions: rename this file to styles.css and complete each TODO block.
+*/
 
-:root {
-  --primary: #1e3a8a;
-  --accent: #f97316;
-  --secondary: #22c55e;
-  --bg: #f8fafc;
-  --text: #0f172a;
-  --muted: #334155;
-  --card: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-}
+/* ===== Base styles (mostly done) ===== */
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: var(--text);
+  line-height: 1.5;
+  color: #222;
   background: #fff;
 }
 
-a {
-  color: inherit;
-  text-decoration-color: rgba(30, 58, 138, 0.45);
-  text-underline-offset: 0.18em;
-}
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-a:hover {
-  text-decoration-thickness: 2px;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.skip-link {
-  position: absolute;
-  left: 1rem;
-  top: -100px;
-  z-index: 999;
-  background: #fff;
-  color: var(--text);
-  border: 2px solid var(--primary);
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.35rem;
-}
-
-.skip-link:focus {
-  top: 1rem;
-}
-
-header,
-#overview,
-#features,
-#workflow,
-#resources,
-#cta,
-footer {
-  width: min(1080px, 92%);
+.container {
+  width: min(1000px, 92%);
   margin: 0 auto;
 }
 
-header {
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.header-inner {
+  /* TODO A (Flexbox):
+     Make the brand appear on the left and the navigation on the right.
+     Requirements:
+       - Use flexbox
+       - Center items vertically
+       - Put space between left and right
+  */
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 16px 0;
 }
 
-header > p {
-  margin: 0;
-  font-size: 1.9rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-}
-
-header > p a {
-  text-decoration: none;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.15rem;
-  margin: 0;
-  padding: 0;
-}
-
-header nav a {
-  text-transform: uppercase;
-  font-size: 0.74rem;
+.brand {
+  font-size: 28px;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-  text-decoration: none;
 }
 
-#overview {
-  position: relative;
-  min-height: 28rem;
-  margin-top: 1.25rem;
-  margin-bottom: 2.6rem;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.brand .dot {
+  /* TODO B (Color):
+     Make the dot a light blue accent color (choose a readable blue).
+  */
+  color: #57a7c6;
+}
+
+.site-nav a {
+  margin-left: 18px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #444;
+}
+
+/* ===== Hero ===== */
+.hero {
+  /* TODO C (Background image hero):
+     Turn this into a hero banner with a background image.
+     Requirements:
+       - Use a background image URL (use the one below)
+       - Make it cover the area and center it
+       - Add a light overlay so text is readable (hint: use a linear-gradient + image)
+       - Set a minimum height (e.g., 360px)
+  */
+  /* My image:
+     https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=60
+  */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)),
+    url("images/hero-focusforge.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 360px;
+}
+
+.hero-content {
+  /* TODO D (Center content):
+     Center the hero text horizontally.
+     Add vertical padding so it doesn't feel cramped.
+  */
   text-align: center;
-  padding: 2rem 1.2rem;
+  padding: 120px 0;
 }
 
-#overview figure {
-  position: absolute;
-  inset: 0;
+.hero h1 {
   margin: 0;
-  z-index: 0;
+  /* TODO E (Typography):
+     Make the headline large and uppercase.
+     (e.g., font-size around 42–48px, text-transform uppercase)
+  */
+  font-size: 46px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
-#overview figure::after {
-  content: "";
+.hero-subhead {
+  margin: 6px 0 22px;
+  /* TODO F (Typography):
+     Make this slightly smaller than h1 and a softer color.
+     (e.g., font-size ~20–24px; color #555)
+  */
+  font-size: 22px;
+  color: #555;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.btn-dark {
+  /* TODO G (Button styling):
+     Make this a dark filled button with white text.
+     (e.g., background #333; color #fff)
+  */
+  background: #333;
+  color: #fff;
+}
+
+.btn-outline {
+  /* TODO H (Button styling):
+     Make this an outlined button with a blue border and matching text.
+     (e.g., border: 2px solid ...; color: ...; background: transparent)
+  */
+  border: 2px solid #3a88a8;
+  color: #3a88a8;
+  background: transparent;
+}
+
+/* ===== Features (3 columns) ===== */
+.features {
+  padding: 42px 0;
+}
+
+.features-grid {
+  /* TODO I (Layout):
+     Arrange the three feature blocks in a row (desktop).
+     Requirements:
+       - Use flexbox
+       - Add a gap between items (e.g., 26px)
+  */
+  display: flex;
+  gap: 26px;
+}
+
+.feature {
+  /* TODO J (Sizing / alignment):
+     Make each feature take equal width and center its text.
+  */
+  flex: 1;
+  text-align: center;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #ddd;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  color: #666;
+  font-size: 22px;
+}
+
+/* ===== Featured content ===== */
+.featured {
+  padding: 42px 0 36px;
+  background: #f7f7f7;
+}
+
+.section-title {
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-lede {
+  text-align: center;
+  max-width: 680px;
+  margin: 10px auto 22px;
+  color: #666;
+  font-size: 13px;
+}
+
+.media {
+  background: #eaeaea;
+  border: 1px solid #ddd;
+  height: 260px;
+  display: grid;
+  place-items: center;
+}
+
+/* ===== Secondary content (2 cards) ===== */
+.secondary {
+  padding: 34px 0 44px;
+}
+
+.secondary-grid {
+  /* TODO K (Layout):
+     Put the two cards next to each other on desktop.
+     Requirements:
+       - Use flexbox
+       - Add a gap (e.g., 26px)
+  */
+  display: flex;
+  gap: 26px;
+}
+
+.card {
+  /* TODO L (Card styling):
+     Give each card a border and make it take equal width.
+     (Hint: flex: 1; border: 1px solid #eee)
+  */
+  flex: 1;
+  border: 1px solid #eee;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-text {
+  padding: 18px;
+}
+
+.card-text h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-text p {
+  margin: 0 0 14px;
+  color: #666;
+  font-size: 13px;
+}
+
+.card-image {
+  min-height: 160px;
+  /* TODO M (Image block):
+     Make the card image behave like a background image:
+       - cover
+       - centered
+  */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Optional images (already provided) */
+.img-a {
+  background-image: url("images/hero-focusforge.png");
+}
+.img-b {
+  background-image: url("images/featured-workflow.png");
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: #f7f7f7;
+  padding: 42px 0;
+}
+
+.cta-inner {
+  /* TODO N (Center CTA):
+     Center the CTA text and button.
+  */
+  text-align: center;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  padding: 24px 0;
+}
+
+.footer-inner {
+  /* TODO O (Footer layout):
+     Arrange footer-left on the left and footer link columns on the right.
+     Requirements:
+       - Use flexbox
+       - Add a gap (e.g., 24px)
+       - Space items out (left/right)
+  */
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.footer-left {
+  max-width: 360px;
+  color: #666;
+  font-size: 12px;
+}
+
+.footer-left a { color: #3a88a8; }
+
+.footer-cols {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-col h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin: 6px 0;
+}
+
+/* A3 structure helpers */
+.skip-link {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(248, 250, 252, 0.24), rgba(15, 23, 42, 0.55));
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  background: #fff;
+  border: 1px solid #333;
+  padding: 6px 10px;
 }
 
-#overview figure img {
+.icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.workflow-list {
+  max-width: 700px;
+  margin: 0 auto 16px;
+}
+
+.media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-#overview > h1,
-#overview > p {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  margin: 0;
-}
-
-#overview > h1 {
-  font-size: clamp(2rem, 4.8vw, 3.35rem);
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  max-width: 16ch;
-}
-
-#overview > p:first-of-type {
-  margin-top: 0.8rem;
-  font-size: clamp(1rem, 2.1vw, 1.25rem);
-  max-width: 62ch;
-  color: #e2e8f0;
-}
-
-#overview > p:last-of-type {
-  margin-top: 1.3rem;
-}
-
-#overview > p:last-of-type a,
-#cta a {
-  display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  border: 2px solid var(--accent);
-  border-radius: 0.35rem;
-  font-weight: 700;
-  padding: 0.7rem 1.1rem;
-}
-
-#overview > p:last-of-type a:hover,
-#cta a:hover {
-  background: #d95d06;
-  border-color: #d95d06;
-}
-
-#overview figcaption {
-  position: absolute;
-  z-index: 2;
-  bottom: 0.9rem;
-  left: 1rem;
-  right: 1rem;
-  margin: 0;
-  font-size: 0.86rem;
-  color: #e2e8f0;
-}
-
-#features,
-#resources {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  margin-bottom: 2.7rem;
-}
-
-#features > h2,
-#resources > h2 {
-  flex-basis: 100%;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.05rem;
-  letter-spacing: 0.08em;
-}
-
-#features > article,
-#resources > article {
-  flex: 1 1 17rem;
-  background: var(--card);
-  border: 1px solid #dbeafe;
-  border-radius: 0.65rem;
-  padding: 1.1rem;
-}
-
-#features > article {
-  text-align: center;
-}
-
-#features article img {
-  margin: 0 auto 0.55rem;
-}
-
-#features h3,
-#resources h3 {
-  margin: 0 0 0.45rem;
-  font-size: 1.02rem;
-  color: var(--primary);
-}
-
-#features p,
-#resources p {
-  margin: 0;
-  color: var(--muted);
-}
-
-#resources p + p {
-  margin-top: 0.8rem;
-}
-
-#resources a {
-  font-weight: 700;
-  color: var(--primary);
-}
-
-#workflow {
-  background: var(--bg);
-  border-radius: 0.65rem;
-  padding: 2rem 1.2rem;
-  margin-bottom: 2.7rem;
-}
-
-#workflow h2 {
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  letter-spacing: 0.08em;
-}
-
-#workflow > p:first-of-type,
-#workflow > p:last-of-type {
-  max-width: 68ch;
-  margin: 0.8rem auto 1.1rem;
-  text-align: center;
-  color: var(--muted);
-}
-
-#workflow ul {
-  max-width: 44rem;
-  margin: 0 auto 1.35rem;
-  padding-left: 1.2rem;
-}
-
-#workflow li {
-  margin: 0.36rem 0;
-}
-
-#workflow figure {
-  margin: 0;
-  border: 1px solid #cbd5e1;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: #fff;
-}
-
-#workflow figcaption {
-  margin: 0;
-  padding: 0.7rem 0.9rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-  border-top: 1px solid #e2e8f0;
-}
-
-#workflow > p:last-of-type a {
-  display: inline-block;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  text-decoration: none;
-  border-radius: 0.35rem;
-  font-weight: 700;
-  padding: 0.55rem 0.9rem;
-}
-
-#workflow > p:last-of-type a:hover {
-  background: #dbeafe;
-}
-
-#cta {
-  text-align: center;
-  background: linear-gradient(120deg, #eff6ff, #fff7ed);
-  border: 1px solid #dbeafe;
-  border-radius: 0.7rem;
-  padding: 2rem 1.1rem;
-  margin-bottom: 2rem;
-}
-
-#cta h2 {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-#cta p {
-  margin: 0.7rem auto 0;
-  color: var(--muted);
-  max-width: 60ch;
-}
-
-#cta p:last-of-type {
-  margin-top: 1.1rem;
-}
-
-footer {
-  border-top: 1px solid #e2e8f0;
-  padding: 1.2rem 0 2rem;
-  display: flex;
-  gap: 1.2rem;
-  justify-content: space-between;
-}
-
-footer > p {
-  margin: 0;
-  color: #475569;
-  font-size: 0.92rem;
-}
-
-footer nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-footer nav a {
-  color: var(--primary);
-  font-size: 0.9rem;
-}
-
-@media (max-width: 860px) {
-  header,
-  footer {
+@media (max-width: 780px) {
+  .header-inner,
+  .features-grid,
+  .secondary-grid,
+  .footer-inner {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  header nav ul {
+  .hero-content {
+    padding: 72px 0;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-subhead {
+    font-size: 18px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-cols {
     flex-wrap: wrap;
-  }
-
-  #overview {
-    min-height: 24rem;
-  }
-
-  #overview figcaption {
-    position: static;
-    margin-top: 1rem;
-    color: #fff;
   }
 }
